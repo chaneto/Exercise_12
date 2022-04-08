@@ -16,9 +16,9 @@ public class main {
         binaryTree.add(2);
         binaryTree.add(17);
         binaryTree.add(6);
-        binaryTree.add(33);
+        binaryTree.add(12);
 
-        binaryTree.print("", binaryTree.getRoot(), false);
+        binaryTree.print("", binaryTree.getRoot());
         System.out.println("BinaryTree Height: " + binaryTree.getHeight(binaryTree.getRoot()));
         System.out.println("BinaryTree Width: " + binaryTree.getMaxWidth(binaryTree.getRoot()));
     }

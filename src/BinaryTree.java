@@ -6,31 +6,31 @@ public class BinaryTree {
         return root;
     }
 
-    private Node addValue(Node current, int value) {
-        if (current == null) {
+    private Node addValue(Node currentNode, int value) {
+        if (currentNode == null) {
             return new Node(value);
         }
 
-        if (value < current.getValue()) {
-            current.setLeft(addValue(current.getLeft(), value));
-        } else if (value > current.getValue()) {
-            current.setRight(addValue(current.getRight(), value));
+        if (value < currentNode.getValue()) {
+            currentNode.setLeft(addValue(currentNode.getLeft(), value));
+        } else if (value > currentNode.getValue()) {
+            currentNode.setRight(addValue(currentNode.getRight(), value));
         } else {
-            return current;
+            return currentNode;
         }
-        return current;
+        return currentNode;
     }
 
     public void add(int value) {
         this.root = addValue(root, value);
     }
 
-    public void print(String prefix, Node node, boolean isLeft) {
+    public void print(String prefix, Node node) {
 
         if (node != null) {
-            print(prefix + "   ", node.getRight(), false);
+            print(prefix + "   ", node.getRight());
             System.out.println (prefix + node.getValue());
-            print(prefix + "   ", node.getLeft(), true);
+            print(prefix + "   ", node.getLeft());
         }
     }
 

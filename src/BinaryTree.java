@@ -18,12 +18,11 @@ public class BinaryTree {
         } else {
             return current;
         }
-
         return current;
     }
 
     public void add(int value) {
-        root = addValue(root, value);
+        this.root = addValue(root, value);
     }
 
     public void print(String prefix, Node node, boolean isLeft) {

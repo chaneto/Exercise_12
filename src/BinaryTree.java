@@ -39,7 +39,6 @@ public class BinaryTree {
             return 0;
         }
         else{
-        {
             int left = getHeight(root.getLeft());
             int right = getHeight(root.getRight());
             if (left > right){
@@ -48,7 +47,6 @@ public class BinaryTree {
             else{
                 return right + 1;
             }
-         }
         }
     }
 

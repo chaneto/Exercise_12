@@ -26,23 +26,6 @@ public class BinaryTree {
         root = addValue(root, value);
     }
 
-//    public void print(Node root, int level){
-//        if(root==null){
-//            return;
-//        }
-//        print(root.getRight(), level+1);
-//        if(level!=0){
-//            for(int i=0;i<level-1;i++)
-//                System.out.print("|\t");
-//            System.out.println("|---"+root.getValue());
-//        }
-//        else{
-//            System.out.println(root.getValue());
-//        }
-//        print(root.getLeft(), level+1);
-//
-//    }
-
     public void print(String prefix, Node node, boolean isLeft) {
 
         if (node != null) {
